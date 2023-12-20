@@ -80,7 +80,7 @@
 }
 .button-container {
     position: absolute;
-    bottom: 0.5em;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 250px;
@@ -121,19 +121,19 @@
     position: relative;
     right : 0%;
     left : 0%;
-    transform: scale(2);
+    transform: scale(1.5);
     bottom : -80px;
 }
 .left-button{
     position: relative;
     right : 62%;
-    transform: scale(2);
+    transform: scale(1.5);
 
 }
 .right-button{
     position: absolute;
     bottom: 26%;
-    transform: translateY(-50%) scale(2);
+    transform: translateY(-50%) scale(1.5);
     right: 0px;
 } 
 @media  (min-width: 500px) {

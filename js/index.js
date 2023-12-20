@@ -161,24 +161,13 @@ function handleButtonClick(direction) {
 }
 
 
-function rotateUp(){
-    snakeElement.style.transform = "rotate(90deg)"
-}
-function rotateDown(){
-    snakeElement.style.transform = "rotate(90deg)"
-}
-function rotateLeft(){
-    snakeElement.style.transform = "rotate(90deg)"
-}
-function rotateRight(){
-    snakeElement.style.transform = "rotate(90deg)"
-}
+
 
 // Add click event listeners to the buttons
-upButton.addEventListener('click', ()=> {handleButtonClick("up"); rotateUp()});
-downButton.addEventListener('click', () => {handleButtonClick("down"); rotateDown()});
-leftButton.addEventListener('click', () => {handleButtonClick("left"); rotateLeft()});
-rightButton.addEventListener('click', () => {handleButtonClick("right"); rotateRight()});
+upButton.addEventListener('click', ()=> {handleButtonClick("up")});
+downButton.addEventListener('click', () => {handleButtonClick("down")});
+leftButton.addEventListener('click', () => {handleButtonClick("left")});
+rightButton.addEventListener('click', () => {handleButtonClick("right")});
 
 // Add keyboard event listener
 window.addEventListener('keydown', e => {
@@ -189,22 +178,19 @@ window.addEventListener('keydown', e => {
     switch (e.key) {
         case "w":
             handleButtonClick("up");
-            rotateUp();
+        
             break;
 
         case "s":
             handleButtonClick("down");
-            rotateDown();
             break;
 
         case "a":
             handleButtonClick("left");
-            rotateLeft();
             break;
 
         case "d":
             handleButtonClick("right");
-            rotateRight();
             break;
 
         default:
