@@ -44,7 +44,7 @@
 
 .head{
     /* background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129)); */
-    background-image: url(/img/head.png);
+    background-image: url(../img/head.png);
     background-repeat: no-repeat;
    
     background-size: cover;
@@ -67,7 +67,7 @@
 .food{
     height: 40px;    
     width: 40px;
-    background-image: url(/img/food.png);
+    background-image: url(../img/food.png);
     background-repeat: no-repeat;
    
     background-size: cover;
