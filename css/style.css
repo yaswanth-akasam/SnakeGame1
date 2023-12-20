@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/bg.jpg"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border: 2px solid rgb(34, 4, 34); 
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 50%;
+}
+.button-container {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.up-button, .down-button, .left-button, .right-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(254, 40, 40);
+    color: rgb(210, 210, 210);
+    font-weight: 700;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 2px 2px 3px rgba(6, 6, 6, 0.3);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border : none
+}
+
+.up-button{
+    position: relative;
+    left : 43%;
+    transform: translate(-50%);
+    top : -60px;
+}
+.down-button{
+    position: relative;
+    right : 0%;
+    left : 0%;
+    /* transform: translateX(); */
+    bottom : -60px;
+}
+.left-button{
+    position: relative;
+    right : 62%;
+}
+.right-button{
+    position: absolute;
+    bottom: 26%;
+    transform: translateY(-50%);
+    right: 0;
+} 
+@media  (min-width: 500px) {
+    .button-container {
+        display: none;
+    }
+}
+
+
+
+
+
