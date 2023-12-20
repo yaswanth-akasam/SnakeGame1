@@ -35,7 +35,7 @@
 #board{
     background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
     width: 90vmin;
-    height: 92vmin;
+    height: 90vmin;
     border: 2px solid black;
     display: grid;
     grid-template-rows: repeat(18, 1fr);
@@ -43,30 +43,48 @@
 }
 
 .head{
-    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
-    border: 2px solid rgb(34, 4, 34); 
+    /* background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129)); */
+    background-image: url(/img/head.png);
+    background-repeat: no-repeat;
+   
+    background-size: cover;
+    background-color: transparent;
+    background-position: center;
+
+    /* border: 2px solid rgb(34, 4, 34);  */
     transform: scale(1.02);
     border-radius: 9px;
 }
 
 .snake{
-    background-color: purple;
-    border: .25vmin solid white;
+    /* background-color: rgb(60, 124, 44); */
+    background: rgb(24,24,24);
+    background: linear-gradient(357deg, rgba(24,24,24,1) 0%, rgba(0,0,0,1) 0%, rgba(30,46,22,1) 0%, rgba(88,136,65,1) 100%);
+    /* border: .25vmin solid white; */
     border-radius: 12px;
 }
 
 .food{
-    background: linear-gradient(red, purple);
-    border: .25vmin solid black;
+    height: 40px;    
+    width: 40px;
+    background-image: url(/img/food.png);
+    background-repeat: no-repeat;
+   
+    background-size: cover;
+    background-color: transparent;
+    background-position: center;
+    
     border-radius: 50%;
+    /* background: linear-gradient(red, purple); */
+    /* border: .25vmin solid black; */
 }
 .button-container {
     position: absolute;
-    bottom: 1em;
+    bottom: 0.5em;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     background-color: aliceblue;
     display: flex;
@@ -95,26 +113,28 @@
 
 .up-button{
     position: relative;
-    left : 43%;
-    transform: translate(-50%);
-    top : -60px;
+    left : 34%;
+    transform: translate(-50%) scale(2);
+    top : -88px;
 }
 .down-button{
     position: relative;
     right : 0%;
     left : 0%;
-    /* transform: translateX(); */
-    bottom : -60px;
+    transform: scale(2);
+    bottom : -80px;
 }
 .left-button{
     position: relative;
     right : 62%;
+    transform: scale(2);
+
 }
 .right-button{
     position: absolute;
     bottom: 26%;
-    transform: translateY(-50%);
-    right: 0;
+    transform: translateY(-50%) scale(2);
+    right: 0px;
 } 
 @media  (min-width: 500px) {
     .button-container {

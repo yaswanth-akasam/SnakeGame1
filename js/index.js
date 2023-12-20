@@ -86,20 +86,22 @@ function gameEngine(){
         if(index === 0){
             snakeElement.classList.add('head');
         }
+
         else{
             snakeElement.classList.add('snake');
         }
+
         board.appendChild(snakeElement);
     });
+
     // Display the food
     foodElement = document.createElement('div');
     foodElement.style.gridRowStart = food.y;
     foodElement.style.gridColumnStart = food.x;
     foodElement.classList.add('food')
     board.appendChild(foodElement);
-
-
 }
+
 
 
 // Main logic starts here
@@ -114,48 +116,7 @@ else{
     hiscoreBox.innerHTML = "HiScore: " + hiscore;
 }
 
-// window.requestAnimationFrame(main);
 
-// const upButton = document.querySelector('.up-button');
-// const downButton = document.querySelector('.down-button');
-// const leftButton = document.querySelector('.left-button');
-// const rightButton = document.querySelector('.right-button');
-
-
-
-// window.addEventListener('keydown', e =>{
-//     inputDir = {x: 0, y: 1} // Start the game
-//     moveSound.play();
-//     switch (e.key) {
-//         case "w":
-//             console.log("ArrowUp");
-//             inputDir.x = 0;
-//             inputDir.y = -1;
-//             break;
-        
-
-//         case "s":
-//             console.log("ArrowDown");
-//             inputDir.x = 0;
-//             inputDir.y = 1;
-//             break;
-
-//         case "a":
-//             console.log("ArrowLeft");
-//             inputDir.x = -1;
-//             inputDir.y = 0;
-//             break;
-
-//         case "d":
-//             console.log("ArrowRight");
-//             inputDir.x = 1;
-//             inputDir.y = 0;
-//             break;
-//         default:
-//             break;
-//     }
-
-// });
 
 window.requestAnimationFrame(main);
 
@@ -199,11 +160,25 @@ function handleButtonClick(direction) {
     }
 }
 
+
+function rotateUp(){
+    snakeElement.style.transform = "rotate(90deg)"
+}
+function rotateDown(){
+    snakeElement.style.transform = "rotate(90deg)"
+}
+function rotateLeft(){
+    snakeElement.style.transform = "rotate(90deg)"
+}
+function rotateRight(){
+    snakeElement.style.transform = "rotate(90deg)"
+}
+
 // Add click event listeners to the buttons
-upButton.addEventListener('click', () => handleButtonClick("up"));
-downButton.addEventListener('click', () => handleButtonClick("down"));
-leftButton.addEventListener('click', () => handleButtonClick("left"));
-rightButton.addEventListener('click', () => handleButtonClick("right"));
+upButton.addEventListener('click', ()=> {handleButtonClick("up"); rotateUp()});
+downButton.addEventListener('click', () => {handleButtonClick("down"); rotateDown()});
+leftButton.addEventListener('click', () => {handleButtonClick("left"); rotateLeft()});
+rightButton.addEventListener('click', () => {handleButtonClick("right"); rotateRight()});
 
 // Add keyboard event listener
 window.addEventListener('keydown', e => {
@@ -214,18 +189,22 @@ window.addEventListener('keydown', e => {
     switch (e.key) {
         case "w":
             handleButtonClick("up");
+            rotateUp();
             break;
 
         case "s":
             handleButtonClick("down");
+            rotateDown();
             break;
 
         case "a":
             handleButtonClick("left");
+            rotateLeft();
             break;
 
         case "d":
             handleButtonClick("right");
+            rotateRight();
             break;
 
         default:
